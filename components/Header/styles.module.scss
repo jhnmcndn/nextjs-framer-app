@@ -1,0 +1,26 @@
+@import "@/styles/_mixin.scss";
+
+.headerContainer {
+  background: #111013;
+  .headerWrapper {
+    @include flex-xy(space-between, center);
+    //max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    .logo {
+      width: 36px;
+      height: 39px;
+    }
+    .btnNavSign {
+      padding: 8px 16px;
+      background: linear-gradient(to bottom, #8161FF, #7855FF);
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 17px;
+      color: #FFF;
+      letter-spacing: -0.3px;
+      line-height: 1.5em;
+      box-shadow: rgba(255, 255, 255, 0.25) 0 1px 1px 0 inset, rgba(0, 0, 0, 0.25) 0 4px 8px 0;
+    }
+  }
+}
