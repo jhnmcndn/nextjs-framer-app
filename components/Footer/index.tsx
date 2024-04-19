@@ -25,7 +25,12 @@ const Footer = () => {
               <span className={styles.listTitle}>{section.title}</span>
               <ul className={styles.listWrapper}>
                 {section.items.map(item => (
-                  <li key={item.name}>{item.name}</li>
+                  <li
+                    key={item.name}
+                    onClick={() => console.log(`Clicked: ${item.link}`)}
+                  >
+                    {item.name}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -39,7 +44,7 @@ const Footer = () => {
                 key={item.alt}
                 onMouseEnter={() => handleHover(item.alt)}
                 onMouseLeave={handleMouseOut}
-                onClick={() => console.log(`clicked ${item.alt}`)}
+                onClick={() => console.log(`Clicked: ${item.alt}`)}
                 className={styles.socialsList}
               >
                 <Image
