@@ -1,0 +1,106 @@
+@import '@/styles/_mixin.scss';
+
+.footerContainer {
+  background: radial-gradient(94% 58.3% at 50.3% 82.6%, hsl(252, 28%, 20%) 0%, rgb(17, 16, 19) /* {"name":"BG"} */ 100%);
+  .footerWrapper {
+    @include flex-xy(space-between, center);
+    flex-direction: column;
+    gap: 100px;
+    padding: 100px 50px 30px;
+    margin: 0 auto;
+    .upperContent {
+      @include flex-xy(space-between, flex-start);
+      width: 100%;
+      max-width: 750px;
+      .listBlock {
+        @include flex-xy(unset, flex-start);
+        flex-direction: column;
+        gap: 20px;
+        font-size: 16px;
+        line-height: 1.2em;
+        color: #FFF;
+        .listTitle {
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        .listWrapper {
+          @include flex-xy(unset, flex-start);
+          flex-direction: column;
+          gap: 20px;
+          li {
+            opacity: 0.6;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+              color: rgba(153, 153, 153, 0.6);
+            }
+          }
+        }
+      }
+    }
+    .bottomContent {
+      position: relative;
+      @include flex-xy(space-between, center);
+      width: 100%;
+      align-content: center;
+      flex: none;
+      flex-wrap: nowrap;
+      height: min-content;
+      overflow: visible;
+      padding: 30px 0 0;
+      &:after {
+        content: "";
+        border-width: 1px 0 0 0;
+        border-color: rgba(255, 255, 255, 0.1);
+        border-style: solid;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        box-sizing: border-box;
+        left: 0;
+        top: 0;
+        border-radius: inherit;
+        pointer-events: none;
+      }
+      .copyright {
+        font-weight: 500;
+        color: #FFF;
+        opacity: 0.6;
+        font-size: 16px;
+        line-height: 1.2em;
+      }
+      .socialsWrapper {
+        @include flex-xy;
+        gap: 10px;
+        .socialsList {
+          img {
+            width: 21px;
+            height: 21px;
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    .footerWrapper {
+      padding: 40px;
+      gap: 50px;
+      .upperContent {
+        gap: 60px;
+        flex-direction: column;
+      }
+      .bottomContent {
+        white-space: nowrap;
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0 0;
+      }
+    }
+  }
+}

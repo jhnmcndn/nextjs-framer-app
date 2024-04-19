@@ -10,3 +10,7 @@
     --color-purple: #7855FF;
     --color-purple-light: #E8E3FD;
 }
+
+body {
+    cursor: default;
+}
