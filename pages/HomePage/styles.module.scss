@@ -1,0 +1,112 @@
+@import "@/styles/_mixin.scss";
+
+.homePageContainer {
+  background: radial-gradient(94% 58.3% at 50.3% 82.6%, #2a2541 0%, rgb(17, 16, 19) 100%);
+  .homeWrapper {
+    @include flex-xy(flex-start, center);
+    flex-direction: column;
+    max-width: 1400px;
+    padding: 120px 100px 500px 100px;
+    margin: 0 auto;
+    gap: 100px;
+    .heroTextWrapper {
+      @include flex-xy;
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+      h1 {
+        color: #FFF;
+        font-weight: 700;
+        font-size: 100px;
+        letter-spacing: -2px;
+        line-height: 1em;
+        white-space: nowrap;
+        span {
+          display: block;
+          color: var(--color-purple);
+        }
+      }
+      p {
+        opacity: 0.8;
+        font-weight: 400;
+        color: var(--color-purple-light);
+        font-size: 32px;
+        line-height: 1.5em;
+        white-space: nowrap;
+      }
+      .buttons {
+        .btn {
+          color: #FFF;
+          font-size: 18px;
+          font-weight: 700;
+          letter-spacing: -0.3px;
+          line-height: 1.5em;
+          text-align: center;
+          padding: 12px 20px;
+          border-radius: 10px;
+          transition: 0.3s all ease-in-out;
+        }
+        .getStarted {
+          background: linear-gradient(to bottom, #8161FF, #7855FF);
+          box-shadow: rgba(255, 255, 255, 0.25) 0 1px 1px 0 inset, rgba(0, 0, 0, 0.25) 0 4px 8px 0;
+          margin-right: 18px;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+        .bookDemo {
+          background: rgba(234, 232, 242, 0.2);
+          &:hover {
+            background: rgba(234, 232, 242, 0.4);
+          }
+        }
+      }
+    }
+    .trustedCompanies {
+      text-align: center;
+      .trustByText {
+        color: var(--color-purple-light);
+        opacity: 0.5;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+        text-transform: uppercase;
+      }
+      .logoWrappers {
+        @include flex-xy;
+        gap: 157px;
+        margin-top: 36px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .homePageContainer {
+    .trustedCompanies {
+      .logoWrappers {
+        gap: 99px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .homePageContainer {
+    .homeWrapper {
+      .heroTextWrapper {
+        h1 {
+          font-size: 52px !important;
+        }
+        p {
+          font-size: 24px !important;
+        }
+      }
+    }
+    .trustedCompanies {
+      .logoWrappers {
+        gap: 62px !important;
+      }
+    }
+  }
+}
