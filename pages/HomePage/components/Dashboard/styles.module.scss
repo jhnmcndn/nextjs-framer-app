@@ -1,0 +1,49 @@
+@import "@/styles/_mixin.scss";
+
+.dashboardContainer {
+  position: relative;
+  min-width: 1200px;
+  background: linear-gradient(140deg, rgb(29, 27, 39) 0%, rgb(37, 35, 42) 100%);
+  padding: 50px 0 39px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.25);
+  .blurFrame {
+    position: absolute;
+    width: 30px;
+    height: 347px;
+    top: 0;
+    opacity: 1;
+    &:nth-child(1) {
+      background: linear-gradient(90deg, rgb(31, 29, 42) 0%, rgba(31, 29, 42, 0) 100%);
+      left: 0;
+    }
+    &:nth-child(2) {
+      background: linear-gradient(270deg, rgb(35, 32, 42) 0%, rgba(34, 33, 42, 0) 100%);
+      right: 0;
+    }
+  }
+  .chart {
+    .line {
+      height: 1px;
+      width: 100%;
+      background: rgba(232, 227, 253, 0.1);
+      &:not(:first-child) {
+        margin-top: 60px;
+      }
+    }
+    .wrapperNums {
+      @include flex-xy(space-between, center);
+      width: 100%;
+      gap: 121px;
+      margin-top: 11px;
+      .nums {
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -1px;
+        color: rgba(232, 227, 253, 0.4);
+      }
+    }
+  }
+}
