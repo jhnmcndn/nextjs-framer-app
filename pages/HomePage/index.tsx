@@ -44,7 +44,7 @@ const heroData = [
 ]
 
 const HomePage = () => {
-  const [screenWidth, setScreenWidth] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(1400);
 
   useEffect(() => {
     const handleResize = () => {
