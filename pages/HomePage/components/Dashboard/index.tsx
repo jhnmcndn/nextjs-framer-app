@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./styles.module.scss";
 import {dm_mono} from "@/app/fonts";
 
@@ -41,6 +42,15 @@ const Dashboard = () => {
       <div className={styles.blurFrame}/>
       <div className={styles.chart}>
         {renderChart()}
+        <div className={styles.svgContainer}>
+          <Image
+            src="/assets/home/graphic.svg"
+            alt="graphic"
+            width={1100}
+            height={245}
+            className={styles.graphicChart}
+          />
+        </div>
       </div>
       Dashboard
     </div>
